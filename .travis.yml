@@ -1,0 +1,29 @@
+os: osx
+language: bash
+cache: bundle 
+before_install: brew update
+install: 
+  - brew install lame
+script: 
+  - cd genspeech
+  - ./genspeech EN Alex
+  - ./genspeech EN Samantha
+  - ./genspeech FR Thomas
+  - ./genspeech FR Amelie
+  - ./genspeech DE Anna
+  - cd ..
+  - say -v ?
+before_deploy:
+  - mkdir release/
+  - mv genspeech/*.zip release/
+  - cp iopage/* release/
+  - cd release && ../create_index.sh && cd ..
+deploy:
+  provider: pages
+  repo: TheRealMoeder/TheRealMoeder.github.io
+  target_branch: master
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: release
+  on:
+    branch: master

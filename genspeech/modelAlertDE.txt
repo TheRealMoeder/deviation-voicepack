@@ -1,0 +1,154 @@
+﻿3D Aerobatik
+3D Querruder
+3D Höhenruder
+3D Raten aktiv
+3D Raten aus
+3D Raten an
+3D Seitenruder
+Aerobatik
+Querruder
+Querruder hoch
+Querruder niedrig
+Querruder mittel
+Luftbremse geschlossen
+Luftbremse offen
+Luftbremse
+Luftbremse aus
+Bremse aus
+Bremse an
+Butterfly aus
+Butterfly an
+Krähe aus
+Krähe an
+Höhenruder
+Höhenruder hoch
+Höhenruder niedrig
+Höhenruder mittel
+Motor aus
+Motor an
+Motor scharf
+Motor deaktiviert
+Motor unscharf
+Expo aus
+Expo an
+Klappen
+Klappen ausgefahren
+Klappen runter
+Klappen voll
+Klappen halb
+Klappen 1
+Klappen mit Querruder synchronisiert
+Klappen 2
+Klappen hoch
+Governor Geschwindigkeit 1
+Governor Geschwindigkeit 2
+Governor Geschwindigkeit 3
+hohe Raten
+Idle down
+Idle up
+Idle up 1
+Idle up 2
+Zündung aktiv
+Zündung aus
+Zündung an
+niedrige Raten
+mittlere Raten
+Präzisions Aerobatik
+Reflex
+Seitenruder
+Seitenruder hoch
+Seitenruder niedrig
+Seitenruder mittel
+Störklappen geschlossen
+Störklappen offen
+Gas
+Gas aktiviert
+Gas deaktiviert
+throttle hold
+Throttle hold aus
+3D pitch aktiv
+3D pitch aus
+Acro Modus
+Winkelmodus
+Neigung halten hold
+Neigungsmodus
+Auto Modus
+Autorotations Modus
+Auto Tune Modus
+Kreismodus
+Steigemodus
+Co-Pilot aus
+Co-Pilot an
+Kurs halten Modus
+Cruise Modus
+Drift Modus
+Flugmodus
+Flugmodus 1
+Flugmodus 2
+Flugmodus 3
+Flugmodus 4
+Flugmodus 5
+Flugmodus 6
+Flugmodus 7
+fly by wire A
+fly by wire B
+fly by wire C
+Folgen Modus
+GPS Modus
+Geführter Modus
+Gyro Kurs halten
+Gyro Raten Modus
+Kurs halten aktiviert
+Home Lock Modus
+Horizont Modus
+Schwebe Modus
+Hybrid Modus
+Lande Modus
+Start Modus
+loiter mode
+Normaler Modus
+Position halten
+Rennen Modus
+rate mode active
+Rettungs
+Such Modus
+Self level Mixing Modus
+Self level Modus
+Geschwindigkeits Modus
+Sport Modus
+Stabilisierung aus
+Stabilisierung an
+Stabilisierter Modus
+Stunt Modus
+Thermal Modus
+trainer
+Trainings Modus
+Wegpunkt
+Zoom Modus
+Barometer aus
+Barometer an
+Batterieverbrauch
+Bomben abgeworfen
+Bomben freigegeben
+Kamera zentriert
+Kamera fixiert
+Kamera manuell
+Kamera aus
+Kamera an
+Kompass aus
+Kompass an
+Stromverbrauch
+Fahrwerk ausfahren
+Fahrwerk einziehen
+Gimbal aktiv
+Gimbal aus
+Gimbal an
+niedrigste Zelle
+Magnetometer aus
+Magnetometer an
+Batteriepack Spannung
+Fallschirm abgeworfen
+Aktuelle Leistung
+Rauch aus
+Rauch an
+Timer zurückgesetzt

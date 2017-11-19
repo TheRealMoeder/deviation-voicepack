@@ -1,0 +1,158 @@
+﻿Acrobaties 3D
+Ailerons 3D
+Profondeur 3D
+Débattements 3D activés
+Débattement 3D on
+Débattement 3D off
+Dérive 3D
+acrobaties
+aileron
+aileron haut
+aileron bas
+aileron moyen
+ailerons
+aérofrein fermé
+aérofrein sortie
+aérofrein activé
+aérofrein désactivé
+frein désactivé
+frein activé
+papillon désactivé
+papillon activé
+crocodile désactivé
+crocodile activé
+profondeur
+profondeur haut
+profondeur bas
+profondeur moyen
+moteur off
+moteur on
+moteur activé
+moteur désactivé
+moteur arrét
+exponentiel désactivé
+exponentiel activé
+volets
+volets déployés
+volets bas
+plein volets
+demi volets
+premier volets
+synchronisation volets avec ailerons
+deuxième volets
+volets haut
+mode gouvernor 1
+mode gouvernor 2
+mode gouvernor 3
+grand débattements
+inactif
+idleup
+idleup 1
+idleup 2
+allumage
+allumage désactivé
+allumage activé
+petit débattements
+débattements moyen
+précision acrobatique
+réflexe
+dérive
+plein dérive
+dérive mini
+dérive moyenne
+spoiler fermé
+spoiler ouvert
+moteur
+controle moteur
+moteur débrayer
+pas 3D activé
+pas 3D désactivé
+mode acro
+mode angle
+controle attitude
+mode attitude
+mode auto
+mode autorotation
+mode réglage automatique
+mode circulaire
+mode escalade
+copilote désactivé
+copilote activé
+mode de vérouillage
+mode croisière
+mode drift
+mode de vol 0
+mode de vol 1
+mode de vol 2
+mode de vol 3
+mode de vol 4
+mode de vol 5
+mode de vol 6
+mode de vol 7
+mode de vol 8
+voler par fil A
+voler par fil B
+voler par fil C
+mode poursuite
+mode GPS
+mode guidé
+controle gyro
+mode taux gyro
+controle gyro activé
+mode homelock
+mode horizon
+mode survol
+mode hybride
+mode attérissage
+mode de lançement
+mode loiter
+mode normal
+position hold
+mode course
+mode débattement activé
+rétablissement
+mode recherche
+mode mixage auto
+mode niveau auto
+mode vitesse
+mode sport
+stabilisation désactivé
+stabilisation activé
+mode stabilisé
+mode stunt
+mode thermique
+maitre
+mode écolage
+waypoint
+mode zoom
+baromètre désactivé
+baromètre activé
+consommation de batterie
+bombes prete
+bombes sorties
+caméra centrées
+caméra fixe
+caméra manuelle
+caméra désactivée
+caméra activée
+boussole désactivée
+boussole activée
+current draw
+train sortie
+train rentré
+nacelle active
+nacelle désactivée
+nacelle activée
+cellule faible
+magnétomètre désactivé
+magnétomètre activé
+tension du pack
+parachute déployé
+lecteur de puissance
+fumigène désactivé
+fumigéne activé
+réignitialisation temps
+starter désactivé
+starter activé
+éclairage désactivé
+éclairage activé

@@ -1,0 +1,155 @@
+3D aerobatics
+3D ailerons
+3D elevator
+3D rates active
+3D rates off
+3D rates on
+3D rudder
+aerobatics
+aileron
+aileron high
+aileron low
+aileron medium
+ailerons
+air brakes closed
+air brakes open
+airbrake
+airbrake off
+brakes off
+brakes on
+butterfly off
+butterfly on
+crow off
+crow on
+elevator
+elevator high
+elevator low
+elevator medium
+engine off
+engine on
+engines armed
+engines disabled
+engines disarmed
+expo off
+expo on
+flaps
+flaps deployed
+flaps down
+flaps full
+flaps half
+flaps one
+flaps synced with ailerons
+flaps two
+flaps up
+Governor speed 1
+Governor speed 2
+Governor speed 3
+high rates
+idle down
+idle up
+idle up 1
+idle up 2
+ignition active
+ignition off
+ignition on
+low rates
+medium rates
+precision aerobatics
+reflex
+rudder
+rudder high
+rudder low
+rudder medium
+spoiler closed
+spoiler open
+throttle
+throttle active
+throttle disabled
+throttle hold
+throttle release
+3d pitch active
+3d pitch off
+acro mode
+angle mode
+attitude hold
+attitude mode
+auto mode
+auto rotation mode
+auto tune mode
+circle mode
+climbing mode
+Co-pilot off
+Co-pilot on
+course lock mode
+cruise mode
+drift mode
+flight mode 0
+flight mode 1
+flight mode 2
+flight mode 3
+flight mode 4
+flight mode 5
+flight mode 6
+flight mode 8
+fly by wire A
+fly by wire B
+fly by wire C
+follow me mode
+GPS mode
+guided mode
+gyro heading hold
+gyro rate mode
+heading hold active
+home lock mode
+horizon mode
+hover mode
+hybrid mode
+landing mode
+launch mode
+loiter mode
+normal mode
+position hold
+Race mode
+rate mode active
+recovery
+seek mode
+self level mixing mode
+self level mode
+speed mode
+sport mode
+stabilization off
+stabilization on
+stabilize mode
+stunt mode
+thermal mode
+trainer
+training mode
+waypoint
+zoom mode
+barometer off
+barometer on
+battery consumption
+bombs away
+bombs released
+camera centered
+camera fixed
+camera manual
+camera off
+camera on
+compass off
+compass on
+current draw
+gear down
+gear up
+gimbal active
+gimbal off
+gimbal on
+lowest cell
+magnetometer off
+magnetometer on
+pack voltage
+parachute deployed
+power reading
+smoke off
+smoke on
+timer reset
