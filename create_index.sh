@@ -9,7 +9,7 @@ do
 	echo "- [$INFILE](${INFILE})" >> index.md
 done
 
-echo $'\n'
+echo $'\n' >> index.md
 echo "* * *" >> index.md
 echo "Last updated:" >> index.md
 echo `date` >> index.md
