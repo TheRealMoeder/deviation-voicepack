@@ -11,7 +11,8 @@ script:
   - cd genspeech
   - if [ "$TRAVIS_EVENT_TYPE" == "api" ]; then
        curl https://moeder.pythonanywhere.com/voicepacker/default/deliver/${BUILD_ID} > modelAlert${BUILD_ID}.txt-mac;
-       tr '\r' '\n' < modelAlert${BUILD_ID}.txt-mac > modelAlert${BUILD_ID}.txt;
+       tr -d '\r' < modelAlert${BUILD_ID}.txt-mac > modelAlert${BUILD_ID}.txt;
+       echo >> modelAlert${BUILD_ID}.txt;
        ./genspeech $GLOBAL_LANG $VOICE $BUILD_ID;
     fi;
   - cd ..
