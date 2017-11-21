@@ -1,29 +1,19 @@
 os: osx
 language: bash
-cache:
-  directories:
-    - $HOME/Library/Caches/Homebrew
-before_install: brew update
-install: 
-  - brew install lame
+before-install: 
+  - curl -L -O http://downloads.sourceforge.net/project/lame/lame/3.99/lame-3.99.5.tar.gz
+  - tar -zxvf lame-3.99.5.tar.gz
+  - cd lame-3.99.5
+  - ./configure
+  - make
+  - sudo make install
 script: 
   - cd genspeech
   - if [ "$TRAVIS_EVENT_TYPE" == "api" ]; then
        curl https://moeder.pythonanywhere.com/voicepacker/default/deliver/${BUILD_ID} > modelAlert${BUILD_ID}.txt-mac;
        tr '\r' '\n' < modelAlert${BUILD_ID}.txt-mac > modelAlert${BUILD_ID}.txt;
        ./genspeech $GLOBAL_LANG $VOICE $BUILD_ID;
-    else
-       ./genspeech EN Alex EN;
     fi;
   - cd ..
-  - say -v ?
 after_success:
-  - cd
-  - git clone --branch master https://github.com/TheRealMoeder/TheRealMoeder.github.io.git TheRealMoeder/TheRealMoeder.github.io
-  - cd TheRealMoeder/TheRealMoeder.github.io
-  - cp TheRealMoeder/deviation-voicepack/genspeech/voice${GLOBAL_LANG}${VOICE}${BUILD_ID}.zip .
-  - ../deviation-voicepack/create_index.sh
-  - git add index.md
-  - git add voice${GLOBAL_LANG}${VOICE}${BUILD_ID}.zip
-  - git commit -m 'Add voicepacker build'
-  - git push
+  - ./push.sh
