@@ -3,7 +3,7 @@ for INFILE in *.zip
 do
 	echo "- [$INFILE](${INFILE})" >> index.md
 done
-echo
+echo $'\n'
 echo "* * *" >> index.md
-echo "This page was generated at " >> index.md
+echo "Last updated:" >> index.md
 echo `date` >> index.md
