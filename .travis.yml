@@ -11,10 +11,6 @@ script:
        ./genspeech $GLOBAL_LANG $VOICE $BUILD_ID;
     else
        ./genspeech EN Alex EN;
-#        ./genspeech EN Samantha EN;
-#        ./genspeech FR Thomas FR;
-#        ./genspeech FR Amelie FR;
-#        ./genspeech DE Anna DE;
     fi;
   - cd ..
   - say -v ?
