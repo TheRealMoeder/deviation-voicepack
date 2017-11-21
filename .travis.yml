@@ -4,6 +4,7 @@ cache: bundle
 before_install: brew update
 install: 
   - brew install lame
+  - brew install curl
 script: 
   - cd genspeech
   - if [ "$TRAVIS_EVENT_TYPE" == "api" ]; then
