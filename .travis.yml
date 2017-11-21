@@ -1,6 +1,6 @@
 os: osx
 language: bash
-before-install: 
+before_install: 
   - curl -L -O http://downloads.sourceforge.net/project/lame/lame/3.99/lame-3.99.5.tar.gz
   - tar -zxvf lame-3.99.5.tar.gz
   - cd lame-3.99.5
