@@ -4,11 +4,10 @@ cache: bundle
 before_install: brew update
 install: 
   - brew install lame
-  - brew install curl
 script: 
   - cd genspeech
   - if [ "$TRAVIS_EVENT_TYPE" == "api" ]; then
-       ./curl https://moeder.pythonanywhere.com/voicepacker/default/deliver/${BUILD_ID} > modelAlert${BUILD_ID}.txt; 
+       curl https://moeder.pythonanywhere.com/voicepacker/default/deliver/${BUILD_ID} > modelAlert${BUILD_ID}.txt; 
        ./genspeech $GLOBAL_LANG $VOICE $BUILD_ID;
     else
        ./genspeech EN Alex EN;
