@@ -6,11 +6,16 @@ install:
   - brew install lame
 script: 
   - cd genspeech
-  - ./genspeech EN Alex
-  - ./genspeech EN Samantha
-  - ./genspeech FR Thomas
-  - ./genspeech FR Amelie
-  - ./genspeech DE Anna
+  - if [ "$TRAVIS_EVENT_TYPE" == "api" ]; then
+        ./curl https://moeder.pythonanywhere.com/voicepacker/default/deliver/${BUILD_ID} > modelAlert${BUILD_ID}.txt; 
+        ./genspeech $GLOBAL_LANG $VOICE $BUILD_ID;
+    else
+        ./genspeech EN Alex EN;
+#        ./genspeech EN Samantha EN;
+#        ./genspeech FR Thomas FR;
+#        ./genspeech FR Amelie FR;
+#        ./genspeech DE Anna DE;
+    fi;
   - cd ..
   - say -v ?
 before_deploy:
