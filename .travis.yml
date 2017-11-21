@@ -7,6 +7,7 @@ before_install:
   - ./configure
   - make
   - sudo make install
+  - cd ..
 script: 
   - cd genspeech
   - if [ "$TRAVIS_EVENT_TYPE" == "api" ]; then
