@@ -1,6 +1,8 @@
 os: osx
 language: bash
-cache: bundle 
+cache:
+  directories:
+    - $HOME/Library/Caches/Homebrew
 before_install: brew update
 install: 
   - brew install lame
@@ -8,24 +10,20 @@ script:
   - cd genspeech
   - if [ "$TRAVIS_EVENT_TYPE" == "api" ]; then
        curl https://moeder.pythonanywhere.com/voicepacker/default/deliver/${BUILD_ID} > modelAlert${BUILD_ID}.txt-mac;
-       tr '\r' '\n' < modelAlert${BUILD_ID}.txt-m > modelAlert${BUILD_ID}.txt;
+       tr '\r' '\n' < modelAlert${BUILD_ID}.txt-mac > modelAlert${BUILD_ID}.txt;
        ./genspeech $GLOBAL_LANG $VOICE $BUILD_ID;
     else
        ./genspeech EN Alex EN;
     fi;
   - cd ..
   - say -v ?
-before_deploy:
-  - mkdir release/
-  - mv genspeech/*.zip release/
-  - cp iopage/* release/
-  - cd release && ../create_index.sh && cd ..
-deploy:
-  provider: pages
-  repo: TheRealMoeder/TheRealMoeder.github.io
-  target_branch: master
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: release
-  on:
-    branch: master
+after_success:
+  - cd
+  - git clone --branch master https://github.com/TheRealMoeder/TheRealMoeder.github.io.git TheRealMoeder/TheRealMoeder.github.io
+  - cd TheRealMoeder/TheRealMoeder.github.io
+  - cp TheRealMoeder/deviation-voicepack/genspeech/voice${GLOBAL_LANG}${VOICE}${BUILD_ID}.zip .
+  - ../deviation-voicepack/create_index.sh
+  - git add index.md
+  - git add voice${GLOBAL_LANG}${VOICE}${BUILD_ID}.zip
+  - git commit -m 'Add voicepacker build'
+  - git push
