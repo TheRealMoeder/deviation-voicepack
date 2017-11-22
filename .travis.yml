@@ -16,8 +16,6 @@ script:
        echo >> modelAlert${BUILD_ID}.txt;
        ./genspeech $GLOBAL_LANG $VOICE $BUILD_ID;
     fi;
-  - pwd
   - cd ..
-  - pwd
 after_success:
   - ./push.sh
