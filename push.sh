@@ -1,11 +1,13 @@
 #!/bin/bash
 
 setup_git() {
+  pwd
   cd
   git config --global user.email "travis@travis-ci.org"
   git config --global user.name "Travis CI"
   git clone --branch master https://${GITHUB_TOKEN}@github.com/TheRealMoeder/TheRealMoeder.github.io.git TheRealMoeder/TheRealMoeder.github.io > /dev/null 2>&1
   cd TheRealMoeder/TheRealMoeder.github.io
+  pwd
 }
 
 commit_website_files() {
