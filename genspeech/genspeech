@@ -122,10 +122,10 @@ do
                 
 	done < $INFILE
 done
-zip -r voice${1}${2}${3}.zip voice.ini MP3
+zip -r ${3}-voice_${1}_${2}_${4}.zip voice.ini MP3
 echo "Finished writing $OUTFILE"
 echo "Please copy $OUTFILE to the media folder of your deviation transmitter."
 echo "The folder mp3 has to be placed on the SD card of your MP3 player."
-echo "Zip created as voice${1}${2}${3}.zip."
+echo "Zip created as ${3}-voice_${1}_${2}_${4}.zip."
 rm $TMPFILE
 exit 0
