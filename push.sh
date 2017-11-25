@@ -9,10 +9,10 @@ setup_git() {
 }
 
 commit_website_files() {
-  cp ../deviation-voicepack/genspeech/voice${GLOBAL_LANG}${VOICE}${BUILD_ID}.zip .
+  cp ../deviation-voicepack/genspeech/*.zip .
   ../deviation-voicepack/create_index.sh
   git add index.md
-  git add voice${GLOBAL_LANG}${VOICE}${BUILD_ID}.zip
+  git add *.zip
   git commit --message "$TRAVIS_COMMIT_MESSAGE"
 }
 
