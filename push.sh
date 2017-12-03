@@ -20,9 +20,15 @@ upload_files() {
   git push --quiet
 }
 
+remove_old_files() {
+  find . -mtime +7 -exec git rm {} \;
+}
+
 echo "Setting up git..."
 setup_git
 echo "Committing files..."
 commit_website_files
+echo "Removing files older than one week..."
+remove_old_files
 echo "Pushing to remote..."
 upload_files
