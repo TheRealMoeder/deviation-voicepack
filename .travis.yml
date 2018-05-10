@@ -9,6 +9,7 @@ before_install:
   - make
   - sudo make install
   - cd ..
+  - brew install sox
 script: 
   - cd genspeech
   - if [ "$TRAVIS_EVENT_TYPE" == "api" ]; then
