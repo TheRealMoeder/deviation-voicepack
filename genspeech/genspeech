@@ -122,6 +122,7 @@ do
                 
 	done < $INFILE
 done
+for NORMFILE in *.mp3; do sox-14.4.2-macosx/sox $NORMFILE -norm=-0.1  
 zip -r ${3}-voice_${1}_${2}_${4}.zip voice.ini MP3
 echo "Finished writing $OUTFILE"
 echo "Please copy $OUTFILE to the media folder of your deviation transmitter."
