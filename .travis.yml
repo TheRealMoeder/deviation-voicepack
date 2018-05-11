@@ -9,7 +9,8 @@ before_install:
   - make
   - sudo make install
   - cd ..
-  - brew install sox
+  - curl -L -O https:// downloads.sourceforge.net/projects/sox/files/sox/14.4.2/sox-14.4.2-macosx.zip
+  - unzip sox-14.4.2-macosx.zip
 script: 
   - cd genspeech
   - if [ "$TRAVIS_EVENT_TYPE" == "api" ]; then
