@@ -9,7 +9,7 @@ before_install:
   - make
   - sudo make install
   - cd ..
-  - curl -L -O http://downloads.sourceforge.net/projects/sox/files/sox/14.4.2/sox-14.4.2-macosx.zip
+  - curl -L -O http://downloads.sourceforge.net/project/sox/sox/14.4.2/sox-14.4.2-macosx.zip
   - unzip sox-14.4.2-macosx.zip
 script: 
   - cd genspeech
