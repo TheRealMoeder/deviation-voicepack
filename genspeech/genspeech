@@ -5,7 +5,12 @@ if [ "`uname`" = "Darwin" ]
 then
 	TTSCMD="say"
         TTSCMD2="pico2wave"
-	TTSOPT="-r $5 -v $2 -o"
+	if [ $# = 5 ]
+	then
+		TTSOPT="-r $5 -v $2 -o"
+	else
+		TTSOPT="-v $2 -o"
+	fi
 	TTSFILEEXT="aiff"
 	TTSLCMD="afinfo"
 	TTSLOPT=""
@@ -132,6 +137,6 @@ zip -r ${3}-voice_${1}_${2}_${4}.zip voice.ini MP3
 echo "Finished writing $OUTFILE"
 echo "Please copy $OUTFILE to the media folder of your deviation transmitter."
 echo "The folder mp3 has to be placed on the SD card of your MP3 player."
-echo "Zip created as ${3}-voice_${1}_${2}_${5}wpm_${4}.zip."
+echo "Zip created as ${3}-voice_${1}_${2}_${4}.zip."
 rm $TMPFILE
 exit 0
