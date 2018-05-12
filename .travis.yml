@@ -9,25 +9,25 @@ before_install:
         ./configure;
         make;
         sudo make install;
-        cd ..
+        cd ..;
     fi;
   - if [ ! -d "$HOME/sox-14.4.2" ]; then
         curl -L -O http://downloads.sourceforge.net/project/sox/sox/14.4.2/sox-14.4.2-macosx.zip;
         unzip sox-14.4.2-macosx.zip;
     fi;
   - if [ "$TRAVIS_EVENT_TYPE" != "api-test" ]; then
-        mkdir voices;
+        mkdir -p voices;
         cd voices;
-        curl -L -O http://swcdn.apple.com/content/downloads/02/37/031-05110/x6z3ofnyfbb0pb73fwwkpt9htlb0fg10as/SpeechVoice_en_US_Alex.pkg;
-        curl -L -O http://swcdn.apple.com/content/downloads/31/08/031-11580/yl6kwlywi3fnk7dw5l440jya4w5x6cgrj4/MLV_en_US_samantha.pkg;
-        curl -L -O http://swcdn.apple.com/content/downloads/25/38/031-11390/jyv1losfgofn70cfds6w9c2xxkj6ea1kgn/MLV_de_DE_anna.pkg;
-        curl -L -O http://swcdn.apple.com/content/downloads/01/60/031-11670/i5e5pj4cn5oy6nr1z129d415t75pc11bmf/MLV_en_GB_daniel.pkg;
-        curl -L -O http://swcdn.apple.com/content/downloads/47/22/031-11693/09kxdzz6urb2jhqd438daigpq93n0rxg1i/MLV_fr_FR_thomas.pkg;
-        curl -L -O http://swcdn.apple.com/content/downloads/32/16/031-29337/rvz49jpfk09y3nmmh4w5ric4t0xfhzoyoo/MultiLingualVoice_fr_CA_amelie.pkg;
-        for f in *.pkg ; do sudo installer -verbose -pkg "$f" -target / ; done;
+        curl -L -O -C - http://swcdn.apple.com/content/downloads/02/37/031-05110/x6z3ofnyfbb0pb73fwwkpt9htlb0fg10as/SpeechVoice_en_US_Alex.pkg;
+        curl -L -O -C - http://swcdn.apple.com/content/downloads/31/08/031-11580/yl6kwlywi3fnk7dw5l440jya4w5x6cgrj4/MLV_en_US_samantha.pkg;
+        curl -L -O -C - http://swcdn.apple.com/content/downloads/25/38/031-11390/jyv1losfgofn70cfds6w9c2xxkj6ea1kgn/MLV_de_DE_anna.pkg;
+        curl -L -O -C - http://swcdn.apple.com/content/downloads/01/60/031-11670/i5e5pj4cn5oy6nr1z129d415t75pc11bmf/MLV_en_GB_daniel.pkg;
+        curl -L -O -C - http://swcdn.apple.com/content/downloads/47/22/031-11693/09kxdzz6urb2jhqd438daigpq93n0rxg1i/MLV_fr_FR_thomas.pkg;
+        curl -L -O -C - http://swcdn.apple.com/content/downloads/32/16/031-29337/rvz49jpfk09y3nmmh4w5ric4t0xfhzoyoo/MultiLingualVoice_fr_CA_amelie.pkg;
+        for f in *.pkg ; do sudo installer -pkg "$f" -target / ; done;
         cd ..;
     fi;
-    
+
 script: 
   - cd genspeech
   - if [ "$TRAVIS_EVENT_TYPE" == "api" ]; then
@@ -43,4 +43,6 @@ after_success:
   - ./push.sh
 cache:
   directories:
-  - /System/Library/Speech/Voices/
+  - voices
+  - sox-14.4.42
+  - lame-3.99.2
