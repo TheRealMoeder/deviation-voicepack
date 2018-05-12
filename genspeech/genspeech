@@ -81,7 +81,7 @@ do
 		IDXTEXTID=`printf '%04d' $IDX`
 		IDXTEXT=`echo ${IDXTEXTID}_${MSG} | tr -d ' '`
 		$TTSCMD ${TTSOPT}${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} "$MSG"
-		../sox-14.4.2/sox ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} --norm=-0.1 ${SPEECHDIR}/processed/${IDXTEXT}.${TTSFILEEXT} -V
+		../sox-14.4.2/sox ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} --norm=-0.1 ${SPEECHDIR}/processed/${IDXTEXT}.${TTSFILEEXT}
 		cp ${SPEECHDIR}/processed/${IDXTEXT}.${TTSFILEEXT} ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT}
 		eval TTSLEN=\`$TTSLCMD $TTSLOPT ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} $TTSLPP\`
 		TTSLEN=`echo 'scale=0;' $TTSLEN '* 1000/1' | bc`
@@ -111,7 +111,7 @@ do
 			IDXTEXTID=`printf '%04d' $IDX`
 			IDXTEXT=`echo ${IDXTEXTID}_${MSG} | tr -d ' '`
 			$TTSCMD ${TTSOPT}${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} "$MSG"
-			../sox-14.4.2/sox ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} --norm=-0.1 ${SPEECHDIR}/processed/${IDXTEXT}.${TTSFILEEXT} -V
+			../sox-14.4.2/sox ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} --norm=-0.1 ${SPEECHDIR}/processed/${IDXTEXT}.${TTSFILEEXT}
 			cp ${SPEECHDIR}/processed/${IDXTEXT}.${TTSFILEEXT} ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT}
 			eval TTSLEN=\`$TTSLCMD $TTSLOPT ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} $TTSLPP\`
 			TTSLEN=`echo 'scale=0;' $TTSLEN '* 1000/1' | bc`
