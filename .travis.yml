@@ -2,16 +2,20 @@ os: osx
 osx_image: xcode7.3
 language: bash
 before_install: 
-  - curl -L -O http://downloads.sourceforge.net/project/lame/lame/3.99/lame-3.99.5.tar.gz
-  - tar -zxvf lame-3.99.5.tar.gz
-  - cd lame-3.99.5
-  - ./configure
-  - make
-  - sudo make install
-  - cd ..
-  - curl -L -O http://downloads.sourceforge.net/project/sox/sox/14.4.2/sox-14.4.2-macosx.zip
-  - unzip sox-14.4.2-macosx.zip
-  - if [ "$TRAVIS_EVENT_TYPE" != "api" ]; then
+  - if [ ! -d "$HOME/lame-3.99.5" ]; then
+        curl -L -O http://downloads.sourceforge.net/project/lame/lame/3.99/lame-3.99.5.tar.gz;
+        tar -zxvf lame-3.99.5.tar.gz;
+        cd lame-3.99.5;
+        ./configure;
+        make;
+        sudo make install;
+        cd ..
+    fi;
+  - if [ ! -d "$HOME/sox-14.4.2" ]; then
+        curl -L -O http://downloads.sourceforge.net/project/sox/sox/14.4.2/sox-14.4.2-macosx.zip;
+        unzip sox-14.4.2-macosx.zip;
+    fi;
+  - if [ "$TRAVIS_EVENT_TYPE" != "api-test" ]; then
         mkdir voices;
         cd voices;
         curl -L -O http://swcdn.apple.com/content/downloads/02/37/031-05110/x6z3ofnyfbb0pb73fwwkpt9htlb0fg10as/SpeechVoice_en_US_Alex.pkg;
@@ -21,6 +25,7 @@ before_install:
         curl -L -O http://swcdn.apple.com/content/downloads/47/22/031-11693/09kxdzz6urb2jhqd438daigpq93n0rxg1i/MLV_fr_FR_thomas.pkg;
         curl -L -O http://swcdn.apple.com/content/downloads/32/16/031-29337/rvz49jpfk09y3nmmh4w5ric4t0xfhzoyoo/MultiLingualVoice_fr_CA_amelie.pkg;
         for f in *.pkg ; do sudo installer -verbose -pkg "$f" -target / ; done;
+        cd ..;
     fi;
     
 script: 
