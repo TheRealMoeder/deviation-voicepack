@@ -123,7 +123,7 @@ do
 	done < $INFILE
 done
 mkdir MP3/processed
-for NORMFILE in *.mp3; do../sox-14.4.2/sox MP3/$NORMFILE -norm=-0.1 MP3/processed/$NORMFILE; done
+for NORMFILE in *.mp3; do ../sox-14.4.2/sox MP3/$NORMFILE -norm=-0.1 MP3/processed/$NORMFILE; done
 cp MP3/processed/*.mp3 MP3/*.mp3
 rm -r MP3/processed
 zip -r ${3}-voice_${1}_${2}_${4}.zip voice.ini MP3
