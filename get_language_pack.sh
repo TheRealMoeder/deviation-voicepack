@@ -30,10 +30,10 @@ Alva="http://swcdn.apple.com/content/downloads/26/04/031-11476/rj3hkevk8u7p1me4e
 Laura="http://swcdn.apple.com/content/downloads/25/25/031-11383/iuyu10lmznf19emz1e6l3fsqjypwb3ke7y/MLV_sk_SK_laura.pkg"
 Jorge="http://swcdn.apple.com/content/downloads/39/32/031-26124/dxwxcovmkxsa9u0fsvb29lavsg8lh9ruc0/MLVUpdate_es_ES_jorge.pkg"
 Monica="http://swcdn.apple.com/content/downloads/55/31/031-29426/w0067w2wo6vs7mpn03zqykivkkr4ldnqcs/MultiLingualVoice_es_ES_monica.pkg"
-Zuzana"http://swcdn.apple.com/content/downloads/01/22/031-11566/4yqsqbld0c4tnfn8bdd2r9bpps6yyobhbl/MLV_cs_CZ_zuzana.pkg"
+Zuzana="http://swcdn.apple.com/content/downloads/01/22/031-11566/4yqsqbld0c4tnfn8bdd2r9bpps6yyobhbl/MLV_cs_CZ_zuzana.pkg"
 Yelda="http://swcdn.apple.com/content/downloads/55/11/031-29425/c6z0kqtv3c9k2qpfi6xu4dc5n83niaqtbh/MLVUpdate_tr_TR_yelda.pkg"
 Mariska="http://swcdn.apple.com/content/downloads/32/23/031-29395/jvbvx3mcg63afdlsvvp5c2b6kc8myt1k3v/MLVUpdate_hu_HU_mariska.pkg"
-downloadlink=`eval echo \\$$1'
+downloadlink=`eval echo \\$$1`
 curl -L -O $downloadlink
 for f in *.pkg ; do sudo installer -pkg "$f" -target / ; done
 cd ..
