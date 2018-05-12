@@ -64,6 +64,7 @@ SPEECHDIR="MP3"
 mkdir $SPEECHDIR 2>/dev/null
 rm -f ${SPEECHDIR}/* >/dev/null 2>&1
 rm -f voice.ini >/dev/null 2>&1
+mkdir ${SPEECHDIR}/processed
 
 for INFILE in globalAlert$1.txt
 do
@@ -80,6 +81,8 @@ do
 		IDXTEXTID=`printf '%04d' $IDX`
 		IDXTEXT=`echo ${IDXTEXTID}_${MSG} | tr -d ' '`
 		$TTSCMD ${TTSOPT}${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} "$MSG"
+		../sox-14.4.2/sox ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} --norm=-0.1 ${SPEECHDIR}/processed/${IDXTEXT}.${TTSFILEEXT} -V
+		cp ${SPEECHDIR}/processed/${IDXTEXT}.${TTSFILEEXT} ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT}
 		eval TTSLEN=\`$TTSLCMD $TTSLOPT ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} $TTSLPP\`
 		TTSLEN=`echo 'scale=0;' $TTSLEN '* 1000/1' | bc`
 		lame --quiet ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} ${SPEECHDIR}/${IDXTEXT}.mp3
@@ -108,6 +111,8 @@ do
 			IDXTEXTID=`printf '%04d' $IDX`
 			IDXTEXT=`echo ${IDXTEXTID}_${MSG} | tr -d ' '`
 			$TTSCMD ${TTSOPT}${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} "$MSG"
+			../sox-14.4.2/sox ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} --norm=-0.1 ${SPEECHDIR}/processed/${IDXTEXT}.${TTSFILEEXT} -V
+			cp ${SPEECHDIR}/processed/${IDXTEXT}.${TTSFILEEXT} ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT}
 			eval TTSLEN=\`$TTSLCMD $TTSLOPT ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} $TTSLPP\`
 			TTSLEN=`echo 'scale=0;' $TTSLEN '* 1000/1' | bc`
 			lame --quiet ${SPEECHDIR}/${IDXTEXT}.${TTSFILEEXT} ${SPEECHDIR}/${IDXTEXT}.mp3
@@ -122,9 +127,6 @@ do
                 
 	done < $INFILE
 done
-mkdir MP3/processed
-for NORMFILE in *.mp3; do ../sox-14.4.2/sox MP3/$NORMFILE --norm=-0.1 MP3/processed/$NORMFILE -V; done
-cp MP3/processed/*.mp3 MP3/*.mp3
 rm -rf MP3/processed
 zip -r ${3}-voice_${1}_${2}_${4}.zip voice.ini MP3
 echo "Finished writing $OUTFILE"
