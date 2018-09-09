@@ -1,12 +1,12 @@
-STARTUP:	Benvenuto in deviation
+STARTUP:	Benvenuto in deviescion
 SHUTDOWN:	Arrivederci
 VOLUME:		Volume
-ALARM1:		Allarme taimer 1
-ALARM2:		Allarme taimer 2
-ALARM3:		Allarme taimer 3
-ALARM4:		Allarme taimer 4
+ALARM1:		Taimer 1
+ALARM2:		Taimer 2
+ALARM3:		Taimer 3
+ALARM4:		Taimer 4
 BATT_ALARM:	voltaggio batteria basso
-DONE_BINDING:	Coneessione completata
+DONE_BINDING:	Connessione completata
 TIMER_WARNING:	Tempo rimanente
 KEY_PRESSING:
 SAVING:		Salvataggio in corso
@@ -17,7 +17,7 @@ TELEMALARM3:	Allarme telemetria 3
 TELEMALARM4:	Allarme telemetria 4
 TELEMALARM5:	Allarme telemetria 5
 TELEMALARM6:	Allarme telemetria 6
-INACTIVITY_ALARM:	Allarme inattività
+INACTIVITY_ALARM:	Allarme inattivitÃ 
 NUMBER0:	0
 NUMBER1:	1
 NUMBER2:	2
@@ -133,7 +133,7 @@ MINUS:		meno
 DEGREES:	gradi
 VOLTS:		volt
 RPMS:		giri al minuto
-AMPERES:	ampèr
+AMPERES:	ampÃ¨r
 ALTITUDE:	metri
 GFORCE:		g
 KMH:		chilometri allora
