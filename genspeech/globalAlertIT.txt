@@ -17,7 +17,7 @@ TELEMALARM3:	Allarme telemetria 3
 TELEMALARM4:	Allarme telemetria 4
 TELEMALARM5:	Allarme telemetria 5
 TELEMALARM6:	Allarme telemetria 6
-INACTIVITY_ALARM:	Allarme inattivitÃ 
+INACTIVITY_ALARM:	Allarme inattività 
 NUMBER0:	0
 NUMBER1:	1
 NUMBER2:	2
@@ -133,7 +133,7 @@ MINUS:		meno
 DEGREES:	gradi
 VOLTS:		volt
 RPMS:		giri al minuto
-AMPERES:	ampÃ¨r
+AMPERES:	ampèr
 ALTITUDE:	metri
 GFORCE:		g
 KMH:		chilometri allora
