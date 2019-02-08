@@ -27,4 +27,6 @@ script:
   - ls /System/Library/Speech/Voices/
   - cd ..
 after_success:
-  - ./push.sh
+  - if [ "$TRAVIS_EVENT_TYPE" == "api" ]; then
+       ./push.sh
+    fi;
