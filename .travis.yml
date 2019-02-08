@@ -2,7 +2,7 @@ os: osx
 osx_image: xcode7.3
 language: bash
 before_install: 
-  - if [ ! -d "$HOME/lame-3.99.5" ]; then
+  - if [ ! -d "$HOME/lame-3.99.5/bin" ]; then
         curl -L -O http://downloads.sourceforge.net/project/lame/lame/3.99/lame-3.99.5.tar.gz;
         tar -zxvf lame-3.99.5.tar.gz;
         cd lame-3.99.5;
@@ -30,3 +30,6 @@ after_success:
   - if [ "$TRAVIS_EVENT_TYPE" == "api" ]; then
        ./push.sh;
     fi;
+cache:
+  directories:
+  - $HOME/lame-3.99.5
