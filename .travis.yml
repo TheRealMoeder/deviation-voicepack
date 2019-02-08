@@ -28,5 +28,5 @@ script:
   - cd ..
 after_success:
   - if [ "$TRAVIS_EVENT_TYPE" == "api" ]; then
-       ./push.sh
+       ./push.sh;
     fi;
