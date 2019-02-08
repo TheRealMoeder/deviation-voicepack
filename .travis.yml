@@ -7,7 +7,7 @@ before_install:
         tar -zxvf lame-3.99.5.tar.gz;
         cd lame-3.99.5;
         ./configure;
-        make;
+        make -j2;
         sudo make install;
         cd ..;
     fi;
