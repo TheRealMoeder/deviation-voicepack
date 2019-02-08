@@ -23,7 +23,7 @@ upload_files() {
 }
 
 remove_old_files() {
-  for ((i=1; i<$BUILD_ID-30; i++)); do find -name $i-voice*.zip -delete; done
+  for ((i=1; i<$BUILD_ID-30; i++)); do find $i-voice*.zip -delete; done
   rm -rf .git
   git init
   git add .
