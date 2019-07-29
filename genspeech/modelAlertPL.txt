@@ -1,0 +1,155 @@
+akrobacje 3D
+lotki 3D
+elevator 3D
+przlicznik 3D aktywny
+przlicznik 3D wyłączone
+przlicznik 3D włączone
+ster 3D
+akrobacje
+lotka
+lotka w górze
+lotka w dole
+lotka centralnie
+lotki
+hamulce powietrzne zamknięte
+hamulce powietrzne otwartę
+hamulc powietrzny
+hamulc powietrzny wyłączony
+hamulce wyłaczony
+hamulce włączone
+motyl wyłączony
+motyl włączony
+krók wyłączony
+krók włączony
+elevator
+elevator w górze
+elevator w dole
+elevator centralnie
+silnik wyłączony
+silnik włączony
+silniki odbezpieczone
+silniki wyłączone
+silniki zabezpieczone
+expo wyłączone
+expo włączone
+klapy
+klapy rozmieszczone 
+klapy w dole
+flaps pełne
+klapy w połowie
+klapa 1
+flaps synced with ailerons
+klapa 2
+klapy w górze
+Prędkość gubernatora 1
+Prędkość gubernatora 2
+Prędkość gubernatora 3
+wysokie przeliczniki 
+idle down
+idle up
+idle up 1
+idle up 2
+zapłon aktywny
+zapłon wyłączony
+zapłon włączony
+niski przelicznik
+średni przelicznij
+dokładne akrobacje
+reflex
+ster
+ster wysoko
+ster nisko
+ster centralnie
+spoiler zamknięty
+spoiler otwarty
+gaz
+gaz aktywny
+gaz nieaktywny
+utrzymaj gaz
+zwolnij gaz
+pochylenie 3D włączone
+pochylenie 3D włyłączone
+tryb acro
+tryb angle
+uzrymaj wysokość
+tryb wysokości
+tryb automatyczny
+tryb automatycznego obracania
+tryb auto tune
+tryb circle
+tryb wspinaczki
+ko-pilot wyłączony
+ko-pilot włączony
+tryb rejsowy zablokowany
+tryb rejsowy
+tryb pracy
+tryb lotu 0
+tryb lotu 1
+tryb lotu 2
+tryb lotu 3
+tryb lotu 4
+tryb lotu 5
+tryb lotu 6
+tryb lotu 8
+lecieć jak po sznurku A
+lecieć jak po sznurku B
+lecieć jak po sznurku C
+tryb podążaj za mną
+tryb GPS
+tryb wspomagany
+blokada kursu żyroskopu
+tryb przelicznika żyroskopu
+blokada kursu aktywna
+tryb namieżenia domu
+tryb horizon
+tryb unoszenia się
+tryb hybrydowy
+tryb lądowania
+tryb startu
+tryb wałęsania się
+tryb normalny
+utrzymanie pozycji
+tryb wyścigowy
+trzyb przelicznika aktywny
+odzyskiwanie
+tryb szukania
+mieszany tryb samo poziomujący 
+tryb samo poziomujący
+tryb szybki
+tryb sportowy
+stabilizacja wyłączona
+stabilizacja włączona
+tryb stabilizacji
+tryb wyczynowy
+tryb termiczny
+trener
+tryb trenera
+cel pośredni
+tryb zoom
+barometer wyłączony
+barometer włączony
+zużycie baterii
+bomby poszły
+bomby spuszczone
+kamera wycentrowana 
+kamera na sztywno
+kamera sterowanie ręczne
+kamera wyłączona
+kamera włączona
+kompas wyłączony
+kompas włączony
+pobór prądu
+podwozie opuszczone
+podwozie podniesione
+gimbal aktywny
+gimbal wyłączony
+gimbal włączony
+najsłabsze ogniwo
+magnetometer wyłączony
+magnetometer włączony
+napięcie baterii
+spadochron odpalony
+odczyt mocy
+dym wyłączony
+dym włączony
+reset zegara
